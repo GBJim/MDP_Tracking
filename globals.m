@@ -9,8 +9,7 @@ function opt = globals()
 opt.root = pwd;
 
 % path for MOT benchmark
-mot_paths = {'/home/yuxiang/Projects/Multitarget_Tracking/MOTbenchmark', ...
-    '/scail/scratch/u/yuxiang/MOTbenchmark'};
+mot_paths = {'/home/max/ironyun_proj/mdp_tracking'};
 for i = 1:numel(mot_paths)
     if exist(mot_paths{i}, 'dir')
         opt.mot = mot_paths{i};
@@ -31,7 +30,7 @@ opt.mot2d_test_seqs = {'TUD-Crossing', 'PETS09-S2L2', 'ETH-Jelmoli', ...
     'ADL-Rundle-3', 'KITTI-16', 'KITTI-19', 'Venice-1'};
 opt.mot2d_test_nums = [201, 436, 440, 1194, 219, 450, 500, 625, 209, 1059, 450];
 
-addpath(fullfile(opt.mot, 'devkit', 'utils'));
+addpath(fullfile(opt.mot, 'motchallenge-devkit', 'motchallenge' , 'utils'));
 addpath([opt.root '/3rd_party/libsvm-3.20/matlab']);
 addpath([opt.root '/3rd_party/Hungarian']);
 

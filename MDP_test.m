@@ -38,7 +38,7 @@ if exist(filename, 'file') ~= 0
 else
     dres_image = read_dres_image(opt, seq_set, seq_name, seq_num);
     fprintf('read images done\n');
-    save(filename, 'dres_image', '-v7.3');
+    save(filename, 'dres_image', '-v7');
 end
 
 % read detections
